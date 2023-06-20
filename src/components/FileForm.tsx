@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import {
   FormControl,
   FormLabel,
@@ -8,23 +8,20 @@ import {
   Stack,
 } from "@chakra-ui/react";
 import { ArrowForwardIcon, ArrowBackIcon } from "@chakra-ui/icons";
-import { useAppDispatch, useAppSelector } from "../hooks";
-import { userSelector, setCompletedSteps } from "../features/users/userSlice";
+import { useAppDispatch } from "../hooks";
+import { setCompletedSteps } from "../features/users/userSlice";
 import { useToast } from "@chakra-ui/react";
 
 const FileForm = ({ setSelectedFile }: any) => {
-  const user = useAppSelector(userSelector);
   const dispatch = useAppDispatch();
 
   const [selectedFile, setSelectedFile2] = useState<File>();
-  const [isFilePicked, setIsFilePicked] = useState(false);
 
   const toast = useToast();
 
   const changeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (event.target.files != null) {
       setSelectedFile2(event.target.files[0]);
-      setIsFilePicked(true);
     }
   };
 

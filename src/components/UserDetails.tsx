@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import BasicDetailsForm from "./BasicDetailsForm";
 import AddressForm from "./AddressForm";
 import FileForm from "./FileForm";

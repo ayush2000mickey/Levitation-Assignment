@@ -1,12 +1,11 @@
-import React, { useState, useEffect } from "react";
-import { Box, Container, Stack, Button } from "@chakra-ui/react";
+import { useEffect } from "react";
+import { Box, Container } from "@chakra-ui/react";
 import ProgressStepper from "../components/ProgressStepper.tsx";
-import { ArrowBackIcon, ArrowForwardIcon } from "@chakra-ui/icons";
 import UserDetails from "../components/UserDetails.tsx";
 import { useNavigate } from "react-router-dom";
 
-import { useAppDispatch, useAppSelector } from "../hooks";
-import { User, userSelector, setAuthToken } from "../features/users/userSlice";
+import { useAppDispatch } from "../hooks";
+import { setAuthToken } from "../features/users/userSlice";
 
 const Home = () => {
   const navigate = useNavigate();

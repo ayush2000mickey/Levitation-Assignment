@@ -1,16 +1,13 @@
 import {
-  Box,
   Button,
   FormControl,
   FormLabel,
   Input,
   VStack,
   Stack,
-  Card,
-  CardBody,
 } from "@chakra-ui/react";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 import "react-phone-number-input/style.css";
 import PhoneInput from "react-phone-number-input";

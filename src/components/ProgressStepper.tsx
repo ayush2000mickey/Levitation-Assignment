@@ -1,6 +1,5 @@
 import {
   Step,
-  StepDescription,
   StepIcon,
   StepIndicator,
   StepNumber,

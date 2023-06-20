@@ -1,5 +1,4 @@
 import {
-  Box,
   Button,
   FormControl,
   FormLabel,
@@ -10,12 +9,11 @@ import {
   NumberInputField,
 } from "@chakra-ui/react";
 import { ArrowForwardIcon, ArrowBackIcon } from "@chakra-ui/icons";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useToast } from "@chakra-ui/react";
 
 import { useAppDispatch, useAppSelector } from "../hooks";
 import {
-  User,
   userSelector,
   setUserAddressDetails,
   setCompletedSteps,

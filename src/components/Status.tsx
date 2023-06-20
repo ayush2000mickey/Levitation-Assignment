@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Button, Stack } from "@chakra-ui/react";
 import { ArrowForwardIcon, ArrowBackIcon } from "@chakra-ui/icons";
 import { useAppDispatch, useAppSelector } from "../hooks";
@@ -65,6 +65,8 @@ const Status = ({ selectedFile, multiFile }: StatusProps) => {
         formBody,
         config
       );
+
+      console.log(data);
 
       toast({
         title: "Form Submitted Successfully",

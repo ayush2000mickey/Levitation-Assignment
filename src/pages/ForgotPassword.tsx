@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 import {
   Box,
@@ -7,8 +7,6 @@ import {
   FormControl,
   FormLabel,
   Input,
-  InputGroup,
-  InputRightElement,
   VStack,
   Heading,
   Text,

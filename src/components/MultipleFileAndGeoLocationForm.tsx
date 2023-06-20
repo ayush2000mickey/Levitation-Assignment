@@ -25,7 +25,6 @@ const MultipleFileAndGeoLocationForm = ({ setMultiFile }: any) => {
     });
 
   const [uploadedFiles, setUploadedFiles] = useState<Array<any>>([]);
-  const [fileLimit, setFileLimit] = useState(false);
 
   const toast = useToast();
   const dispatch = useAppDispatch();
@@ -37,10 +36,9 @@ const MultipleFileAndGeoLocationForm = ({ setMultiFile }: any) => {
       const file = files[i];
       if (uploaded.findIndex((f) => f.name === file.name) === -1) {
         uploaded.push(file);
-        if (uploaded.length === MAX_COUNT) setFileLimit(true);
+
         if (uploaded.length > MAX_COUNT) {
           alert(`You can only add a maximum of ${MAX_COUNT} files`);
-          setFileLimit(false);
           limitExceeded = true;
           return true;
         }
