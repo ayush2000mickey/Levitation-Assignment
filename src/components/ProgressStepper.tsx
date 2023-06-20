@@ -43,6 +43,7 @@ const ProgressStepper = () => {
         {steps.map((step, index) => (
           <Step key={index}>
             <StepIndicator>
+              <div className="hidden">{step.title}</div>
               <StepStatus
                 complete={<StepIcon />}
                 incomplete={<StepNumber />}
